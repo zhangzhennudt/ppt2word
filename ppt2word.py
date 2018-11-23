@@ -12,9 +12,9 @@ from win32com.client import Dispatch, constants
 ppt = win32com.client.Dispatch('PowerPoint.Application')
 ppt.Visible = 1
 print("开始导出")
-pptSel = ppt.Presentations.Open("D:/codepython/导出PPT到WORD/ppt/1.pptx")
+pptSel = ppt.Presentations.Open("your ppt path")
 win32com.client.gencache.EnsureDispatch('PowerPoint.Application')
-f = open("D:/codepython/导出PPT到WORD/1.txt","w")
+f = open("your output txt path","w")
 slide_count = pptSel.Slides.Count
 for i in range(1,slide_count + 1):
   shape_count = pptSel.Slides(i).Shapes.Count
